@@ -1,4 +1,4 @@
-
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
@@ -12,5 +12,5 @@ app.use(express.json());
 const PostsRouter = require('./Routes/posts');
 app.use('/posts',PostsRouter);
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 app.listen(port,()=> console.log('server started'));
