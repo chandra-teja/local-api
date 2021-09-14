@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 require('./prod')(app);
 mongoose
   .connect(
-    "mongodb+srv://postblog:post123@samplecluster.8quxu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    process.env.database_url
   )
   .then(() => console.log("Db connected"))
   .catch((err) => console.log("Db connection failed", err));
